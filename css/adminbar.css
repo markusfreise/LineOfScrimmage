@@ -1,0 +1,10 @@
+#wpadminbar {
+    top: auto;
+    bottom: 0;
+
+}
+
+#wpadminbar .menupop .ab-sub-wrapper {
+    top: auto;
+    bottom: 32px;
+}

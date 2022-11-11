@@ -1,0 +1,8 @@
+article {
+    clear: both;
+    margin: 0 auto;
+    @extend .typography;
+    figure {
+        margin: 0;
+    }
+}

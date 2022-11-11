@@ -1,0 +1,12 @@
+.post,
+.page {
+    a.button,
+    .button {
+        display: inline-block;
+        padding: 0.6em 1.5em;
+        background: var(--c-corporate);
+        color: white;
+        text-decoration: none;
+        border-radius: var(--radius);
+    }
+}	

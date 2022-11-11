@@ -1,0 +1,33 @@
+table {
+
+	width: 100%;
+	background: white;
+
+}
+
+td,th {
+
+	border-top: solid 1px #dddddd;
+	border-left: solid 1px #dddddd;
+	padding: 0.5em 0.7em;
+
+}
+
+th {
+
+	background: #474747;
+	color: white;
+	font-family: var(--ff-head);
+
+}
+
+th:first-child,
+td:first-child {
+
+	border-left: none;
+
+}
+
+tbody tr:nth-child(odd) td {
+	background-color: #eeeeee;
+}

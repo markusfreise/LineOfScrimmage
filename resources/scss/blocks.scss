@@ -1,0 +1,86 @@
+.df-blocks-upload-wrap {
+    position: relative;
+    .df-blocks-upload-button {
+        cursor: pointer;
+        position: absolute;
+        color: white;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0.5em 1.5em;
+        border: solid 1px white;
+        border-radius: 8px;
+    }
+}
+
+.df-ui,
+.df-upload {
+    position: relative;
+    .df-button,
+    .df-upload-button {
+        font-family: sans-serif;
+        line-height: 1;
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0.5em 1.5em 0.4em;
+        border: solid 1px white !important;
+        color: white !important;
+        background-color: var(--c-corporate) !important;
+        white-space: nowrap;
+        font-size: 1rem;
+        z-index: 2015;
+        &.minus,
+        &.plus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            border-radius: 20px;
+            width: 40px;
+            height: 40px;
+            background-image: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.74846e-07" y1="16" x2="32" y2="16" stroke="white" stroke-width="4"/> <line x1="16" y1="32" x2="16" stroke="white" stroke-width="4"/> </svg>');
+            background-position: center;
+            background-size: 28px;
+            background-repeat: no-repeat;
+            &.minus {
+                background-image: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.74846e-07" y1="16" x2="32" y2="16" stroke="white" stroke-width="4"/> </svg>');
+            }
+        }
+        &.small {
+            font-size: 0.86rem;
+        }
+        &:hover {
+            background-color: var(--c-corporate) !important;
+        }
+        border-radius: 8px;
+        &.top-left,
+        &.topleft {
+            left: 1em;
+            top: 1em;
+            transform: none;
+        }
+        &.top-right,
+        &.topright {
+            left: auto;
+            right: 1em;
+            top: 1em;
+            transform: none;
+        }
+        &.rightcenter,
+        &.right-center {
+            left: auto;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+        &.static {
+            position: static;
+            transform: none;
+            left: 0;
+            top: 0;
+            margin: 1em 0;
+        }
+    }
+}

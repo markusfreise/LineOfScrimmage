@@ -1,0 +1,64 @@
+.content {
+    &:not(.wp-block):first-child {
+        margin-top: var(--m-vert);
+    }
+    @extend .typography;
+    ._brlbs-switch-consent,
+    &>.wp-block-columns,
+    &>.wrapThis,
+    &>ul,
+    &>ol,
+    &>blockquote,
+    &>form,
+    &>p,
+    &>dd,
+    &>h1,
+    &>h2,
+    &>h3,
+    &>h4,
+    &>h5,
+    &>h6,
+    &>figure {
+        max-width: var(--max-width);
+        margin-left: auto;
+        margin-right: auto;
+        @media (max-width: 1179px) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+    &>ul {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    h2+ul {
+        margin-top: 1em;
+    }
+    &>.wp-block-buttons,
+    &>.wp-block-columns,
+    &>.wp-block-group {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &>.wp-block-group {
+        margin-bottom: 1em;
+    }
+    li {
+        background: none;
+        padding-left: 0;
+    }
+    .wp-block-columns {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .wp-block-group__inner-container {
+        .wp-block-columns {
+            margin-top: 0rem;
+            margin-bottom: 0rem;
+        }
+    }
+    .wp-block-df-block-df-abstract {
+        margin-bottom: 3rem;
+    }
+    @import "colors.scss"
+}

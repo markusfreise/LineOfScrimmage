@@ -1,0 +1,150 @@
+.typography {
+    b,
+    strong {
+        font-weight: bold;
+    }
+    i,
+    em {
+        font-style: italic;
+    }
+    blockquote,
+    pre {
+        padding: 1rem 0;
+    }
+    .wp-block-quote,
+    blockquote {
+        padding: 0;
+        font-size: 1.2em;
+        margin: 2em initial;
+        border: none;
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    pre {
+        font-family: var(--ff-fixed);
+        line-height: 1.5;
+        background: black;
+        color: white;
+    }
+    color: var(--c-copy);
+    dd,
+    dt,
+    ul,
+    ol,
+    p {
+        margin: 0 0 1em 0;
+        line-height: 1.7;
+    }
+    .small {
+        font-size: 0.75em;
+    }
+    .abstract {
+        @media (min-width: 560px) {
+            font-size: var(--fs-large);
+        }
+        font-weight: bold;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    ul {
+        li:not([class]) {
+            margin-top: 10px;
+            &:nth-child {
+                margin: 0;
+            }
+            padding-left: 20px;
+            margin-left: 0;
+            background: url("../images/Bullet.svg") no-repeat 0 6px;
+        }
+        ul {
+            margin-left: 1em;
+        }
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ol li {
+        list-style-type: decimal;
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+    ul,
+    ol {
+        margin: 1em 0;
+        line-height: 1.4;
+    }
+    caption,
+    .h1,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        line-height: 1.2;
+        font-family: var(--ff-head);
+        font-weight: normal;
+        a {
+            text-decoration: none;
+            color: var(--c-copy);
+            &:hover {
+                color: black;
+            }
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .h1 {
+        font-family: var(--ff-head);
+        font-size: 2.5em;
+    }
+    h1 {
+        @extend .h1;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    caption,
+    h3 {
+        font-size: 1.3em;
+        @media (min-width: 560px) {
+            font-size: 1.5em;
+        }
+    }
+    h4,
+    h5 {
+        font-size: 1.2em;
+    }
+    h1+*,
+    h2+*,
+    h3+*,
+    .coltop+h1,
+    .coltop+h2,
+    .coltop+h3,
+    .coltop+h4,
+    .coltop+h5,
+    a[name="copytop"]+h1,
+    a[name="copytop"]+h2,
+    a[name="copytop"]+h3,
+    a[name="copytop"]+h4,
+    a[name="copytop"]+h5 {
+        margin-top: 0;
+    }
+    a {
+        color: var(--c-corporate);
+        &:hover {
+            color: var(--c-head);
+            &:active {
+                color: var(--c-corporate);
+            }
+        }
+    }
+    .wp-caption p {
+        font-size: 0.8em;
+        margin: 0.5em 0 1em 0;
+    }
+}

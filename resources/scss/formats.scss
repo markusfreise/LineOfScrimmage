@@ -1,0 +1,56 @@
+/*
+/* Formate
+*/
+
+article {
+    &.page,
+    &.type-date,
+    &.format-standard {}
+    &.format-image {}
+    &.format-quote {}
+    &.format-status {}
+    &.format-gallery {
+        .gallery {
+            dl.gallery-item {}
+        }
+    }
+    &.format-video {
+        iframe {
+            max-width: 100%;
+        }
+    }
+}
+
+.credits {
+    color: var(--c-copy);
+    p {
+        font-size: 1em;
+        margin: 0;
+        float: left;
+        margin: 0 20px 0 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    ul {
+        font-size: 1em;
+        float: left;
+        margin: 0 20px 0 0;
+        li {
+            float: left;
+            background: none;
+            padding: 0;
+            margin: 0;
+            &:after {
+                content: ",\00a0";
+            }
+            &:first-child,
+            &:last-child {
+                content: "";
+                &:after {
+                    content: "";
+                }
+            }
+        }
+    }
+}

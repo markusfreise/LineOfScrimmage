@@ -1,0 +1,103 @@
+.wp-block-eaw-artists {
+    .inner {
+        img {
+            @media(max-width: 1023px) {
+                display: none !important;
+            }
+        }
+    }
+
+    .grid-container {
+        position: relative;
+        margin-bottom: var(--m-vert);
+        .grid-wrapper {
+            display: grid;
+            gap: var(--gap-2x);
+            @media(min-width: 768px){
+                gap: var(--gap-4x);
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+
+    .swiper-container {
+        position: relative;
+        z-index: 2;
+        padding-top: var(--m-vert-slim);
+        overflow: hidden;
+        margin-top: calc(-3.5 * var(--m-vert-slim));
+
+        .swiper-wrapper {
+            height: 100%;
+        }
+    }
+
+    .grid-slide,
+    .swiper-slide {
+        position: relative;
+        height: auto;
+        border-radius: var(--radius);
+        background-color: var(--c-blue);
+        background-size: cover;
+
+        &>div {
+            padding: var(--gap);
+
+            @media(min-width: 768px) {
+                padding: var(--gap-2x);
+            }
+        }
+
+        color: white;
+
+        h2 {
+            color: white;
+            text-transform: none;
+            font-size: var(--fs-copy);
+
+            @media(min-width: 768px) {
+                font-size: var(--fs-large);
+            }
+
+            &+h3 {
+                font-size: var(--fs-copy);
+
+                &+p {
+                    margin-top: var(--gap-2x);
+                }
+            }
+        }
+
+        a.button {
+            position: relative;
+            z-index: 1989;
+
+            @media(max-width: 767px) {
+                padding: 0.2em 1em;
+            }
+
+            font-size: var(--fs-copy);
+
+        }
+
+        a.button:hover {
+            background-color: white !important;
+            color: var(--c-copy);
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 110%;
+
+            @media(min-width: 768px) {
+                height: 120%;
+            }
+
+            max-width: none;
+            width: auto;
+            border-radius: 0 0 var(--radius) 0;
+        }
+    }
+}

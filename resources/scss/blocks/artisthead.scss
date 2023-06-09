@@ -1,0 +1,85 @@
+.wp-block-eaw-artisthead {
+    position: relative;
+    width: 100%;
+    @media(max-width: 767px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        position: relative;
+        z-index: 1989;
+        max-height: 400px;
+        max-width: 86vw;
+        @media(min-width: 768px){
+            max-width: none;
+            max-height: none;
+            margin-left: var(--width-margin);
+            width: calc(0.43 * var(--max-width));
+        }
+    }
+    .text {
+        @media(min-width: 768px){
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+        }
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        @media(min-width: 768px){
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: var(--m-vert-slim);
+        }
+    }
+    .quote {
+        font-size: 1.2em;
+        @media(min-width: 768px){
+            font-size: 1.6em;
+        }
+        @media(min-width: 1024px){
+            font-size: 2.4em;
+        }
+        @media(max-width: 767px){
+            padding: var(--gap) var(--gap-2x) var(--gap-2x) 20vw;
+        }
+        @media(min-width: 768px){
+            padding: 0 var(--width-margin) 0 50vw;
+        }
+        position: relative;
+        svg {
+            position: absolute;
+            left: var(--gap);
+            top: 0;
+            @media(max-width: 767px){
+                width: var(--gap-15x);
+            }
+            @media(min-width: 768px){
+                transform: translate(-120%, -20%);
+                left: 50vw;
+            }
+        }
+        p {
+            line-height: 1.4;
+            text-transform: none;
+        }
+        color: var(--c-corporate);
+    }
+    .name {
+        font-size: 1.8em;
+        @media(min-width: 1024px){
+            font-size: 2.4em;
+        }
+        text-transform: uppercase;
+        padding: var(--gap-2x);
+        font-weight: bold;
+        @media(min-width: 768px){
+            margin-top: var(--m-vert);
+            padding: var(--m-vert-slim) var(--width-margin) var(--m-vert-slim) 50vw;
+        }
+        background: var(--c-blue);
+        color: white !important;
+    }
+}

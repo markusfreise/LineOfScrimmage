@@ -1,10 +1,13 @@
 .content {
-    &:not(.wp-block):first-child {
-        margin-top: var(--m-vert);
-    }
+    margin-top: var(--gap);
     @extend .typography;
     ._brlbs-switch-consent,
+    &>.wp-block-eaw-intro,
     &>.wp-block-columns,
+    &>.wp-block-buttons,
+    &>.wp-block-eaw-artists.grid,
+    &>.wp-block-eaw-quotes,
+    &>div.wp-block-group,
     &>.wrapThis,
     &>ul,
     &>ol,
@@ -18,14 +21,41 @@
     &>h4,
     &>h5,
     &>h6,
+    &>.wp-block-group:not(.has-background),
     &>figure {
-        max-width: var(--max-width);
-        margin-left: auto;
-        margin-right: auto;
-        @media (max-width: 1179px) {
-            padding-left: 2rem;
-            padding-right: 2rem;
+        width: auto;
+        margin-left: var(--width-margin);
+        margin-right: var(--width-margin);
+    }
+    &>.wp-block-eaw-intro {
+        max-width: var(--article-width);
+    }
+    &>h1:first-child {
+        color: var(--c-blue);
+        font-size: pxtoem(42);
+        max-width: 720px;
+        margin-left: var(--width-margin);
+        margin-top: 1em;
+        font-size: clamp(42px,3em,72px);
+        @media(min-width: 1680px){
+            font-size: 86px
         }
+    }
+    &>h1.large {
+        color: var(--c-blue);
+        margin-top: 0;
+    }
+    &>p.large {
+        font-size: 2em;
+        max-width: var(--article-width-slim);
+        text-align: center;
+    }
+    &>p:last-child {
+        margin-bottom: var(--m-vert);
+    }
+    &>.wp-block-columns {
+        margin-top: var(--m-vert-slim);
+        gap: var(--gap);
     }
     &>ul {
         margin-top: 2em;
@@ -37,8 +67,8 @@
     &>.wp-block-buttons,
     &>.wp-block-columns,
     &>.wp-block-group {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: var(--width-margin);
+        margin-right: var(--width-margin);
     }
     &>.wp-block-group {
         margin-bottom: 1em;
@@ -46,10 +76,6 @@
     li {
         background: none;
         padding-left: 0;
-    }
-    .wp-block-columns {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
     }
     .wp-block-group__inner-container {
         .wp-block-columns {

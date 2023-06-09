@@ -1,0 +1,37 @@
+.wp-block-eaw-hero {
+    .inner {
+        background-color: var(--c-blue);
+        background-size: cover;
+        padding: var(--width-margin);
+        background-position: right center;
+        padding-bottom: 0;
+        @media(min-width: 768px){
+            background-position: center;
+            padding-top: 0;
+             padding-top: var(--gap-2x);
+            display: grid;
+            align-items: end;
+            gap: var(--gap-2x);
+            grid-template-columns: 2fr 3fr;
+        }
+        img {
+            @media(max-width: 767px){
+                display: none;
+            }
+            height: 124%;
+            margin-top: -10%;
+        }
+        &>div {
+            padding-bottom: var(--gap-2x);
+            h1 {
+                margin: 0 0 0.5em;
+                color: var(--c-corporate);
+            }
+            h2 {
+                margin: 0;
+                font-weight: normal;
+                color: white;
+            }
+        }
+    }
+}

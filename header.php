@@ -37,26 +37,31 @@
 
 	<div id="wrapall">
 
-		<header id="header" class="noprint">
+		<header class="header noprint">
 			<div class="wrap">
-			<a href="<?php echo home_url();?>" class="logo"><?php bloginfo('name'); ?></a>
+			<a href="<?php echo home_url();?>" class="logo">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/EAWENT-Logo.png" alt="">
+			</a>
 			<?php if( has_nav_menu("main") ): ?>
 				<div id="nav">
 					<nav class="main">
 						<?php wp_nav_menu(array("theme_location"=>"main")); ?>
+					</nav>
+					<nav class="secondary">
+						<?php wp_nav_menu(array("theme_location"=>"secondary")); ?>
 					</nav>
 					<div class="clear"></div>
 				</div>
 				<?php endif; ?>
 			</div>
 			<?php if( has_nav_menu("mobile") ): ?>
-				<a id="trigger" class="open">
+				<a id="trigger">
 					<span class="ff1"></span>
 					<span class="ff2"></span>
 					<span class="ff3"></span>
 				</a>
 				<div id="mobile_menu">
-					<a href="<?php echo home_url();?>" class="logo"><img src="<?php echo get_template_directory_uri();?>/images/i-meds-Logo.svg" alt="i-meds"></a>
+					<a href="<?php echo home_url();?>" class="logo"><img src="<?php echo get_template_directory_uri();?>/images/EAWent-Logo.png" alt="EAWent"></a>
 					<div>
 						<?php wp_nav_menu(array("theme_location"=>"main")); ?>
 						<?php if( has_nav_menu("secondary") ): ?>
@@ -73,4 +78,4 @@
 			<?php endif; ?>
 		</header>
 
-		<section id="content" class="clear">
+		<section id="content">

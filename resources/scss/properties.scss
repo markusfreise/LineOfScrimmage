@@ -1,37 +1,47 @@
 :root {
     
     // Colours
-    --c-copy: #242424;
-    --c-corporate: #8c7ae6;
+	--c-red: #9C1006;
+    --c-blue: #112F71;
+	--c-copy: #242424;
+	--c-weiss: #ffffff;
+	--c-subtil: #F5F4ED;
+    --c-corporate: var(--c-red);
     --c-head: var(--c-corporate);
     
     // Fonts
-    --fs-copy: 1rem;
-    --fs-large: #{pxtoem(19)};
-    --ff-copy: sans-serif;
-    --ff-head: sans-serif;
+    --fs-copy: clamp(15px,2vw,22px);
+    --fs-large: #{pxtoem(24)};
+    --ff-copy: 'SourceSans',sans-serif;
+    --ff-head: 'SourceSans',sans-serif;
     --ff-fixed: sans-serif;
     
 
     // Widths
     --max-width: calc(100% - 4rem);
-    --width-margin: 2rem;
+    --width-margin: var(--gap);
+    --margin: var(--gap-2x);
     @media(min-width: 1280px) {
-        --max-width: 1184px;
-        --width-margin: calc(50% - var(--max-width) * 0.5);
+        --margin: calc(50vw - var(--max-width) * 0.5);
+        --max-width: 1280px;
+        --width-margin: calc(50vw - var(--max-width) * 0.5);
     }
     --article-width: 768px;
     @media(min-width: 1280px) {
         --article-width: 960px;
     }
-    --article-width-slim: 960px;
+    --article-width-slim: 820px;
 
     // Margins
-    --m-vert: 106px;
-    --m-vert-slim: 58px;
+    --m-vert: 32px;
+    @media(min-width: 1024px){
+        --m-vert: 106px;
+    }
+    --m-vert-slim: calc(0.5 * var(--m-vert));
     --gap: #{pxtorem(20)};
     // Calcs
     --m-vert-2x: calc(2 * var(--m-vert));
+    --gap-15x: calc(1.5 * var(--gap));
     --gap-2x: calc(2 * var(--gap));
     --gap-3x: calc(3 * var(--gap));
     --gap-4x: calc(4 * var(--gap));
@@ -43,3 +53,27 @@
     --shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     --shadow-flat: 0px 2px 10px rgba(0, 0, 0, 0.15);
     }
+
+    div.gap {
+    width: var(--gap);
+}
+
+div.gap2x {
+    width: var(--gap-2x);
+}
+
+div.m-vert {
+    width: var(--m-vert);
+}
+
+div.m-vert-slim {
+    width: var(--m-vert-slim);
+}
+
+div.width-margin {
+    width: var(--width-margin);
+}
+
+div.article-width {
+    width: var(--article-margin);
+}

@@ -1,0 +1,65 @@
+{
+    "version": 2,
+    "settings": {
+        "color": {
+            "defaultPalette": false,
+            "defaultDuotone": true,
+            "custom": true,
+            "text": true,
+            "background": true,
+            "customDuotone": true,
+            "customGradient": true,
+            "defaultGradients": true,
+            "defaultPalette": true,
+            "duotone": [],
+            "gradients": [],
+            "link": false,
+            "palette": [{
+                    "slug": "--df-corporate",
+                    "color": "#ff5c02",
+                    "name": "Orange"
+                },
+                {
+                    "slug": "--df-orange-light",
+                    "color": "#f8eae2",
+                    "name": "Hellorange"
+                },
+                {
+                    "slug": "--df-blue",
+                    "color": "#027bb5",
+                    "name": "Blau"
+                },
+                {
+                    "slug": "--df-blue-light",
+                    "color": "#ebeff2",
+                    "name": "Hellblau"
+                },
+                {
+                    "slug": "--df-copy",
+                    "color": "#242424",
+                    "name": "Copy"
+                },
+                {
+                    "slug": "--df-weiss",
+                    "color": "#ffffff",
+                    "name": "Weiß"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "elements": {
+            "button": {
+                "color": {
+                    "background": "#9C1006",
+                    "text": "#ffffff"
+                },
+                ":hover": {
+                    "color": {
+                        "background": "#112F71"
+                    }
+                }
+            }
+        }
+    }
+}

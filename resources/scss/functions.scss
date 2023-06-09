@@ -4,11 +4,11 @@
     @return math.div($px, ($base*0.01)) * 1vw;
 }
 
-@function pxtorem($px, $base: 16) {
+@function pxtorem($px, $base: 18) {
     @return math.div($px, $base) * 1rem;
 }
 
-@function pxtoem($px, $base: 16) {
+@function pxtoem($px, $base: 18) {
     @return math.div($px, $base) * 1em;
 }
 

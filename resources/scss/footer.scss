@@ -1,10 +1,41 @@
 footer {
-    padding: 2em 0;
+    margin-top: var(--m-vert);
+    border-top: solid 1em var(--c-corporate);
+    margin-bottom: var(--gap-2x); 
+    &.has-note {
+        margin-bottom: pxtoem(120); 
+    }
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    background-color: white;
     a {
         color: var(--c-copy);
         text-decoration: none;
+    }
+    &>div {
+        img {
+        width: clamp(120px, pxtovw(160), 286px);
+        }
+        padding: 2em var(--margin);
+        display: grid;
+        gap: var(--gap-2x);
+        @media(min-width: 1024px){
+            grid-template-columns: 1fr 794px;
+        }
+        &#contact {
+            margin-top: 0.5em;
+            border-top: solid 0.25em var(--c-corporate);
+        }
+    }
+    .address {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+            color: var(--c-copy);
+        }
     }
     nav {
         ul {
@@ -12,6 +43,57 @@ footer {
             justify-content: center;
             li {
                 margin: 0 1em;
+            }
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    text-transform: uppercase;
+    background: var(--c-red);
+    text-align: center;
+    color: white;
+    font-size: 1.24em;
+    @media(max-width: 767px){
+        br {
+            display: none;
+        }
+    }
+    @media(min-width: 1024px){
+        font-size: 2em;
+    }
+    font-weight: bold;
+    z-index: 1986;
+}
+
+.artists {
+    padding: 1rem 0;
+    border: solid 14px var(--c-red);
+    border-width: 4px 0;
+    &>div {
+        padding: 1rem 0 0;
+        border: solid 14px var(--c-red);
+        border-width: 1rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media(min-width: 1024px){
+            grid-template-columns: repeat(4, 1fr);
+        }
+        img {
+            display: flex;
+        }
+        &>div {
+            p {
+                padding: 1rem 1rem 14px;
+                font-size: 1.2em;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
             }
         }
     }

@@ -1,3 +1,19 @@
+@import "blocks/hero.scss";
+@import "blocks/feature.scss";
+@import "blocks/artists.scss";
+@import "blocks/artisthead.scss";
+@import "blocks/quotes.scss";
+
+.content>.wp-block-buttons,
+.wp-block-eaw-hero,
+.wp-block-eaw-feature {
+    margin-bottom: var(--m-vert);
+}
+
+.wp-block-eaw-intro {
+    margin-bottom: var(--m-vert-slim);
+}
+
 .df-blocks-upload-wrap {
     position: relative;
     .df-blocks-upload-button {

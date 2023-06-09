@@ -19,6 +19,9 @@ body {
     font-size: var(--fs-copy);
     -webkit-font-smoothing: antialiased;
     color: var(--c-copy);
+    &.scroll-lock {
+        overflow: hidden;
+    }
 }
 
 .wrap {
@@ -31,5 +34,3 @@ body {
 #wrapall {
     margin: 0 auto;
 }
-
-section#content {}

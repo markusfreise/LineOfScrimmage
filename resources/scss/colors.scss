@@ -1,12 +1,92 @@
 .has-background {
-    margin: var(--m-vert) 0;
-    padding: 1px 0 var(--m-vert-slim) 0;
+
+    padding: var(--gap);
+    @media(min-width: 768px){
+        padding: var(--gap-2x);
+    }
+
+    &.wp-block-group {
+        margin-top: var(--m-vert);
+        margin-bottom: var(--m-vert);
+
+        &+.has-background {
+            margin-top: calc(-1 * var(--m-vert));
+        }
+
+        padding: 1px 0 var(--m-vert-slim) 0;
+    }
 
     &>.wp-block-group__inner-container>:not(.wp-block-vh-galerie):first-child {
         margin-top: var(--m-vert);
     }
 
-    &+.has-background {
-        margin-top: calc(-1 * var(--m-vert));
+}
+
+.has-df-corporate-background-color,
+.has-df-red-background-color,
+.has-df-blue-background-color {
+    h1,
+    h2,
+    h3 {
+        color: white !important;
+    }
+    ul {
+        li:not([class]) {
+            background-image: url("../images/Bullet-w.svg");
+        }
+    }
+}
+
+section.wp-block-group.has-background {
+    
+    margin-left: 0;
+    margin-right: 0;
+    padding: var(--gap);
+    @media(min-width: 768px){
+        padding: var(--gap-2x);
+    }
+
+    @media(min-width: 1024px) {
+        padding: var(--gap-4x) var(--width-margin) var(--m-vert) var(--width-margin);
+    }
+
+    &:has(figure:last-child) {
+        padding-bottom: 0;
+        margin-bottom: calc(2 * var(--m-vert));
+
+        &+.wp-block-group {
+            margin-top: var(--m-vert);
+        }
+
+        figure {
+            @media(min-width: 768px) {
+                max-width: 75%;
+            }
+
+            margin-left: 0 !important;
+            margin-top: calc(-0.5 * var(--m-vert));
+            transform: translateY(var(--m-vert));
+        }
+    }
+}
+
+div.wp-block-group.has-background {
+    padding: var(--gap-2x) !important;
+}
+
+.wp-block-group.has-df-weiss-color {
+
+    h1,
+    h2,
+    h3 {
+        color: white;
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            color: white;
+        }
     }
 }

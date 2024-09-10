@@ -12,4 +12,4 @@ const { max } = require('lodash');
  |
  */
 
-mix.js('resources/js/site.js', './js').vue().sass('resources/scss/site.scss','./css/site.css').sass('resources/scss/editor.scss','./css/editor.css').options({processCssUrls: false}).sourceMaps(true, 'source-map').browserSync({watch: true, files: ['./css/*.css','./*.php','./*/*.php'], host: 'site.test', proxy: {target: 'https://site.test'}});
+mix.js('resources/js/site.js', './js').sass('resources/scss/site.scss','./css/site.css').sass('resources/scss/editor.scss','./css/editor.css').options({processCssUrls: false}).sourceMaps(true, 'source-map').browserSync({watch: true, files: ['./css/*.css','./*.php','./*/*.php'], host: 'site.test', proxy: {target: 'https://site.test'}});

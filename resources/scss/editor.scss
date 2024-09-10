@@ -7,19 +7,48 @@
 @import "content";
 @import "mixins";
 @import "typography";
+@import "blocks.scss";
+@import "wordpress.scss";
 
 strong {
     font-weight: bold;
 }
 
-.is-root-container,
-.editor-styles-wrapper .wp-block {
+.wp-block-post-title {
+    @extend .h1;
+    font-family: var(--ff-head);
+    font-size: var(--fs-hl-large);
+    font-weight: normal;
+    text-transform: uppercase;
     max-width: var(--max-width);
     margin-left: auto;
     margin-right: auto;
-    @extend .typography;
-    @extend .content;
 }
+
+h1.wp-block-post-title {
+    font-size: 2.4em;
+    padding: 0.2em 0.5em;
+    color: var(--c-corporate);
+    font-family: var(--ff-head);
+}
+
+.is-root-container {
+    @media(min-width: 1280px) {
+        --width-margin: calc(50% - var(--max-width) * 0.5);
+        --width-margin-article: calc(50% - var(--max-width) * 0.5);
+    }
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    @import "forms.scss";
+    @extend .content;
+    @extend .typography;
+    .gform_wrapper {
+        max-width: var(--article-width);
+        margin: 0 auto;
+    }
+}
+
 
 .editor-post-title__input,
 .editor-post-title__block .editor-post-title__input {
@@ -44,5 +73,3 @@ strong {
 .wp-block[data-align="full"] {
     max-width: none;
 }
-
-@import "blocks.scss";

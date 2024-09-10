@@ -16,6 +16,7 @@ function los_post_types() {
 		),
 		'has_archive' => true,
 		'menu_position' => 5,
+		'menu_icon' => 'dashicons-image-filter',
 		'public' => true,
 		'supports' => array(
 			'title','editor','excerpt','custom-fields','thumbnail'

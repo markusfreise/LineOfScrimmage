@@ -19,10 +19,12 @@ body {
     font-size: var(--fs-copy);
     -webkit-font-smoothing: antialiased;
     color: var(--c-copy);
+    &.scroll-lock {
+        overflow: hidden;
+    }
 }
 
 .wrap {
-    overflow: hidden;
     width: var(--max-width);
     margin: 0 auto;
     position: relative;

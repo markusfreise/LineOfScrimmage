@@ -39,3 +39,14 @@
 .text-right {
 	text-align: right;
 }
+
+
+#searchform {
+	display: flex;
+	input {
+		flex-grow: 1;
+	}
+	button {
+		flex-shrink: 0;
+	}
+}

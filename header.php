@@ -39,14 +39,14 @@
 
 		<header id="header" class="noprint">
 			<div class="wrap">
-			<a href="<?php echo home_url();?>" class="logo"><?php bloginfo('name'); ?></a>
+			<a href="<?php echo home_url();?>" class="logo">
+				<img src="<?php echo get_template_directory_uri();?>/images/Salubris-Bielefeld.png" alt="<?php bloginfo('name'); ?>">
+				</a>
 			<?php if( has_nav_menu("main") ): ?>
-				<div id="nav">
-					<nav class="main">
-						<?php wp_nav_menu(array("theme_location"=>"main")); ?>
-					</nav>
-					<div class="clear"></div>
-				</div>
+				<nav>
+					<?php wp_nav_menu(array("theme_location"=>"main")); ?>
+					<?php wp_nav_menu(array("theme_location"=>"secondary")); ?>
+				</nav>
 				<?php endif; ?>
 			</div>
 			<?php if( has_nav_menu("mobile") ): ?>

@@ -1,11 +1,11 @@
 .content {
-    &:not(.wp-block):first-child {
-        margin-top: var(--m-vert);
-    }
     @extend .typography;
     ._brlbs-switch-consent,
     &>.wp-block-columns,
+    &>.wp-block-file,
+    &>.wp-block-buttons,
     &>.wrapThis,
+    &>div.wp-block-group,
     &>ul,
     &>ol,
     &>blockquote,
@@ -19,9 +19,8 @@
     &>h5,
     &>h6,
     &>figure {
-        max-width: var(--max-width);
-        margin-left: auto;
-        margin-right: auto;
+        max-width: var(--article-width);
+        margin-left: var(--width-margin);
         @media (max-width: 1179px) {
             padding-left: 2rem;
             padding-right: 2rem;

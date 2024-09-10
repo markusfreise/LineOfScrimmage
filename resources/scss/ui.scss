@@ -1,12 +1,22 @@
+.error404,
+.search,
+.block-editor-block-list__block,
+.home,
 .post,
 .page {
     a.button,
     .button {
-        display: inline-block;
-        padding: 0.6em 1.5em;
+        display: inline-flex;
+        align-items: center;
+        font-family: var(--ff-head);
+        font-size: 1em;
+        padding: 0.6em 1em;
         background: var(--c-corporate);
         color: white;
         text-decoration: none;
-        border-radius: var(--radius);
+        border: none;
+        svg {
+            margin-right: 0.5em;
+        }
     }
 }	
